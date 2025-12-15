@@ -26,7 +26,7 @@ jobs:
         pytest tests/ -v --conv=src --cov-report=term-missing --cov-report=html
 
     - name: Upload coverage HTML report
-      uses: actions/upload-rtifact@v4
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: coverage-report-${{ matrix.python-version }}
